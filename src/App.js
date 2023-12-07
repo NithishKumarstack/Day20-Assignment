@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './Components/Home/Home-Page';
 
+const LISTS = [
+  {
+    id: 1,
+    value: "FREE",
+    price: "$0/month",
+    user: "✔ Single User",
+    storage: "✔ 50GB Storage",
+    public_projects: "✔ Unlimited Public Projects",
+    access: "✔ Community Access",
+    private_projects: "✖ Unlimited Private Projects",
+    support: "✖ Dedicated Phone Support",
+    domain: "✖ Free SubDomain",
+    report: "✖ Monthly Status Reports"
+  },
+  {
+    id: 2,
+    value: "PLUS",
+    price: "$9/month",
+    user: "✔ 5 Users",
+    storage: "✔ 50GB Storage",
+    public_projects: "✔ Unlimited Public Projects",
+    access: "✔ Community Access",
+    private_projects: "✔ Unlimited Private Projects",
+    support: "✔ Dedicated Phone Support",
+    domain: "✔ Free SubDomain",
+    report: "✖ Monthly Status Reports"
+  },
+  {
+    id: 3,
+    value: "PRO",
+    price: "$49/month",
+    user: "✔ Unlimited Users",
+    storage: "✔ 50GB Storage",
+    public_projects: "✔ Unlimited Public Projects",
+    access: "✔ Community Access",
+    private_projects: "✔ Unlimited Private Projects",
+    support: "✔ Dedicated Phone Support",
+    domain: "✔ Free SubDomain",
+    report: "✔ Monthly Status Reports"
+  },
+]
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Home lists={LISTS} />
     </div>
   );
-}
+};
 
 export default App;
